@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 8%;
+    --foreground: 40 20% 95%;
+
+    --card: 0 0% 11%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 0 0% 11%;
+    --popover-foreground: 40 20% 95%;
+
+    --primary: 350 60% 35%;
+    --primary-foreground: 40 20% 95%;
+
+    --secondary: 43 80% 50%;
+    --secondary-foreground: 0 0% 8%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 40 10% 60%;
+
+    --accent: 350 50% 25%;
+    --accent-foreground: 40 20% 95%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 43 80% 50%;
+
+    --radius: 0.75rem;
+
+    --gold: 43 80% 50%;
+    --gold-light: 43 70% 65%;
+    --garnet: 350 60% 35%;
+    --garnet-dark: 350 65% 22%;
+    --garnet-light: 350 50% 45%;
+    --ivory: 40 20% 95%;
+    --surface: 0 0% 12%;
+    --surface-hover: 0 0% 16%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(350 65% 22%) 0%, hsl(0 0% 6%) 60%, hsl(0 0% 4%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(43 80% 45%), hsl(43 70% 60%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 12%) 0%, hsl(0 0% 9%) 100%);
+    --gradient-garnet: linear-gradient(135deg, hsl(350 60% 35%), hsl(350 65% 22%));
+
+    --shadow-gold: 0 4px 20px -4px hsl(43 80% 50% / 0.3);
+    --shadow-card: 0 8px 32px -8px hsl(0 0% 0% / 0.5);
+    --shadow-garnet: 0 4px 20px -4px hsl(350 60% 35% / 0.4);
+
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 40 20% 95%;
+    --sidebar-primary: 350 60% 35%;
+    --sidebar-primary-foreground: 40 20% 95%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 40 20% 95%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 43 80% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-surface/60 backdrop-blur-xl border border-border/50;
+  }
+
+  .glass-card {
+    background: var(--gradient-card);
+    @apply backdrop-blur-xl border border-border/50 rounded-xl;
+    box-shadow: var(--shadow-card);
+  }
+
+  .gold-text {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gold-border {
+    border-image: var(--gradient-gold) 1;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+  .hover-lift:hover {
+    @apply -translate-y-1;
+    box-shadow: var(--shadow-gold);
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .section-padding {
+    @apply px-4 py-16 md:px-8 md:py-24 lg:px-16;
+  }
+
+  .table-row-alt:nth-child(even) {
+    @apply bg-surface/40;
+  }
+
+  .table-row-alt:nth-child(odd) {
+    @apply bg-transparent;
+  }
+
+  .table-row-highlight {
+    @apply bg-garnet/10 border-l-2 border-l-secondary;
+  }
+}
+
+@layer utilities {
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  @keyframes pulse-gold {
+    0%, 100% { box-shadow: 0 0 0 0 hsl(43 80% 50% / 0.4); }
+    50% { box-shadow: 0 0 0 8px hsl(43 80% 50% / 0); }
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(90deg, transparent 0%, hsl(43 80% 50% / 0.1) 50%, transparent 100%);
+    background-size: 200% 100%;
+    animation: shimmer 3s infinite;
+  }
+
+  .animate-pulse-gold {
+    animation: pulse-gold 2s infinite;
+  }
+
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+}
