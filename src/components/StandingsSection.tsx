@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { standingsPrincipal, standingsJuvenil, standingsJuvenilD, type TeamStanding } from "@/data/standings";
 import { Trophy } from "lucide-react";
+import ClasificadosTop10 from "./ClasificadosTop10";
+import ClubLogo from "./ClubLogo";
 
 const tabs = [
   { id: "principal", label: "Principal", data: standingsPrincipal },
@@ -40,7 +42,12 @@ const StandingsTable = ({ data, showGoals }: { data: TeamStanding[]; showGoals: 
                 {row.pos}
               </span>
             </td>
-            <td className="py-3 px-3 font-medium text-foreground whitespace-nowrap">{row.team}</td>
+            <td className="py-3 px-3 font-medium text-foreground whitespace-nowrap">
+              <div className="flex items-center gap-2">
+                <ClubLogo clubName={row.team} size="sm" />
+                {row.team}
+              </div>
+            </td>
             <td className="py-3 px-2 text-center text-muted-foreground">{row.pj}</td>
             <td className="py-3 px-2 text-center text-muted-foreground">{row.pg}</td>
             <td className="py-3 px-2 text-center text-muted-foreground">{row.pe}</td>
@@ -77,7 +84,9 @@ const StandingsSection = () => {
           <h2 className="font-heading text-3xl md:text-5xl font-bold uppercase tracking-tight text-foreground">
             Tabla de Posiciones
           </h2>
-          <p className="text-muted-foreground text-sm mt-2">Resultados al término de la 5ta fecha — 05/04/2026</p>
+          <p className="text-muted-foreground text-sm mt-2">
+            Tablas oficiales publicadas por la Liga Deportiva de Piribebuy
+          </p>
         </div>
 
         <div className="flex justify-center mb-6">
@@ -99,8 +108,15 @@ const StandingsSection = () => {
         </div>
 
         <div className="glass-card p-4 md:p-6 overflow-hidden">
-          <StandingsTable data={currentTab.data} showGoals={activeTab !== "principal"} />
+          <StandingsTable data={currentTab.data} showGoals={true} />
         </div>
+
+        {activeTab === "principal" && (
+          <ClasificadosTop10 title="Top 10 Clasificados — Categoría Principal" data={standingsPrincipal} />
+        )}
+        {activeTab === "juvenil" && (
+          <ClasificadosTop10 title="Top 10 Clasificados — Categoría Juvenil" data={standingsJuvenil} />
+        )}
       </div>
     </section>
   );

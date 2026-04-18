@@ -47,6 +47,9 @@ const FixtureSection = () => {
               >
                 <div className="flex items-center gap-3">
                   <span className="font-heading font-semibold text-sm text-foreground">{round.name}</span>
+                  {round.name.includes("Reprogramada") && (
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-secondary bg-secondary/10 px-2 py-0.5 rounded-full">Reprogramado</span>
+                  )}
                   <span className="text-xs text-muted-foreground">{round.date}</span>
                 </div>
                 {expandedRound === ri ? (

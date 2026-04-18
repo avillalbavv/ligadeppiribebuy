@@ -14,7 +14,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 container mx-auto text-center px-4 py-32 md:py-40">
         <div className="animate-fade-up">
-          <img src={ldpLogo} alt="Liga Deportiva de Piribebuy" className="w-28 h-28 md:w-40 md:h-40 object-contain mb-6 animate-pulse-gold drop-shadow-2xl" />
+          <img src={ldpLogo} alt="Liga Deportiva de Piribebuy" className="w-28 h-28 md:w-40 md:h-40 object-contain mb-6 mx-auto animate-pulse-gold drop-shadow-2xl" />
         </div>
 
         <h1 className="animate-fade-up delay-100 font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight uppercase">

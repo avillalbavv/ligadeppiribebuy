@@ -1,4 +1,4 @@
-import { Instagram, MapPin, Mail } from "lucide-react";
+import { Instagram, MapPin, Phone, Facebook } from "lucide-react";
 import ldpLogo from "@/assets/ldp-logo.png";
 
 const FooterSection = () => {
@@ -24,17 +24,23 @@ const FooterSection = () => {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-secondary flex-shrink-0" />
-                <span>Piribebuy, Cordillera, Paraguay</span>
+                <span>General Díaz, Yegros, Piribebuy, Paraguay</span>
               </li>
               <li className="flex items-center gap-2">
-                <Instagram className="w-4 h-4 text-secondary flex-shrink-0" />
-                <a href="https://instagram.com/lagranatepiribebuy" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
-                  @lagranatepiribebuy
+                <Phone className="w-4 h-4 text-secondary flex-shrink-0" />
+                <span>0515 212 442</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Facebook className="w-4 h-4 text-secondary flex-shrink-0" />
+                <a href="https://www.facebook.com/LaGranatePiribebuy/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
+                  La Granate Piribebuy
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-secondary flex-shrink-0" />
-                <span>ligadeportivaldp@gmail.com</span>
+                <Instagram className="w-4 h-4 text-secondary flex-shrink-0" />
+                <a href="https://www.instagram.com/lagranatepiribebuy" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
+                  @lagranatepiribebuy
+                </a>
               </li>
             </ul>
           </div>

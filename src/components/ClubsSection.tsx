@@ -1,5 +1,6 @@
 import { clubs } from "@/data/fixtures";
 import { Users } from "lucide-react";
+import ClubLogo from "./ClubLogo";
 
 const ClubsSection = () => {
   return (
@@ -22,10 +23,8 @@ const ClubsSection = () => {
               key={club}
               className={`glass-card p-4 text-center hover-lift animate-fade-up delay-${((i % 5) + 1) * 100}`}
             >
-              <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-primary/30 border border-primary/50 flex items-center justify-center">
-                <span className="font-heading text-sm font-bold text-secondary">
-                  {club.charAt(0)}
-                </span>
+              <div className="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                <ClubLogo clubName={club} size="lg" />
               </div>
               <span className="text-xs font-medium text-foreground leading-tight block">{club}</span>
             </div>
