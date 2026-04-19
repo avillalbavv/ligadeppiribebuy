@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BarChart3, Trophy, AlertTriangle, ShieldAlert, Star, Goal } from "lucide-react";
+import { BarChart3, Trophy, AlertTriangle, ShieldAlert, Star, Goal, Info, Shield } from "lucide-react";
 import { playerStats } from "@/data/resolutions";
 import ClubLogo from "./ClubLogo";
 
@@ -8,6 +8,26 @@ const tabs = [
   { key: "bestPlayers" as const, label: "Mejor Jugador", icon: Star },
   { key: "yellowCards" as const, label: "Amarillas", icon: AlertTriangle },
   { key: "redCards" as const, label: "Rojas", icon: ShieldAlert },
+];
+
+/** Highlight facts from 6th date */
+const campeonatoFacts = [
+  {
+    icon: Goal,
+    text: "16 goles en 6 partidos en la Fecha 6 — promedio de 2,66 goles por partido.",
+  },
+  {
+    icon: Shield,
+    text: "4 clubes sin conocer la derrota: Sport Unión, Sol de Mayo, 13 de Junio San Antonio e Itaguyra.",
+  },
+  {
+    icon: Trophy,
+    text: "Valla invicta: 13 de Junio San Antonio y Sport Unión no han recibido goles.",
+  },
+  {
+    icon: Info,
+    text: "Richard Araujo (6 goles) fue transferido al Deportivo Santaní (Intermedia).",
+  },
 ];
 
 const PlayerStatsSection = () => {
@@ -30,8 +50,22 @@ const PlayerStatsSection = () => {
             Estadísticas de Jugadores
           </h2>
           <p className="text-muted-foreground text-sm mt-2">
-            Así queda la tabla de goleadores y estadísticas al cierre de la 5ta fecha del campeonato.
+            Actualizado al cierre de la 6ª fecha del Campeonato 2026.
           </p>
+        </div>
+
+        {/* Campeonato highlight facts */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-3xl mx-auto mb-8">
+          {campeonatoFacts.map(({ icon: Icon, text }, i) => (
+            <div
+              key={i}
+              className="glass-card px-4 py-3 flex items-start gap-3 animate-fade-up"
+              style={{ animationDelay: `${i * 80}ms` }}
+            >
+              <Icon className="w-4 h-4 text-secondary shrink-0 mt-0.5" />
+              <p className="text-xs text-muted-foreground leading-relaxed">{text}</p>
+            </div>
+          ))}
         </div>
 
         {/* Tabs */}
@@ -57,7 +91,7 @@ const PlayerStatsSection = () => {
           </div>
         </div>
 
-        {/* Stats Content */}
+        {/* Stats table */}
         <div className="glass-card p-4 md:p-6 max-w-3xl mx-auto">
           <div className="flex items-center gap-2 mb-4 pb-3 border-b border-border/30">
             {(() => {
@@ -69,7 +103,8 @@ const PlayerStatsSection = () => {
             </h3>
           </div>
 
-          {currentStats.length === 0 || (currentStats.length === 1 && currentStats[0].player === "Por confirmar") ? (
+          {currentStats.length === 0 ||
+          (currentStats.length === 1 && currentStats[0].player === "Por confirmar") ? (
             <div className="text-center py-12">
               <Trophy className="w-10 h-10 text-muted-foreground/30 mx-auto mb-3" />
               <p className="text-muted-foreground text-sm">
@@ -93,7 +128,7 @@ const PlayerStatsSection = () => {
                   }`}
                 >
                   <span
-                    className={`font-heading font-bold text-sm w-8 text-center ${
+                    className={`font-heading font-bold text-sm w-8 text-center shrink-0 ${
                       i === 0 ? "text-secondary" : "text-muted-foreground"
                     }`}
                   >
@@ -103,14 +138,25 @@ const PlayerStatsSection = () => {
                   <ClubLogo clubName={stat.club} size="sm" />
 
                   <div className="flex-1 min-w-0">
-                    <p className={`text-sm font-medium ${i === 0 ? "text-secondary" : "text-foreground"}`}>
-                      {stat.player}
-                    </p>
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <p
+                        className={`text-sm font-medium ${
+                          i === 0 ? "text-secondary" : "text-foreground"
+                        }`}
+                      >
+                        {stat.player}
+                      </p>
+                      {stat.note && (
+                        <span className="text-[10px] bg-muted/60 text-muted-foreground px-2 py-0.5 rounded-full leading-tight">
+                          {stat.note}
+                        </span>
+                      )}
+                    </div>
                     <p className="text-xs text-muted-foreground">{stat.club}</p>
                   </div>
 
                   <span
-                    className={`font-heading font-bold text-lg ${
+                    className={`font-heading font-bold text-lg shrink-0 ${
                       i === 0 ? "text-secondary" : "text-foreground"
                     }`}
                   >

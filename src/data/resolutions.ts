@@ -35,6 +35,7 @@ export interface PlayerStat {
   player: string;
   club: string;
   value: number | string;
+  note?: string;
   photo?: string;
 }
 
@@ -47,12 +48,20 @@ export interface PlayerStatsData {
 
 export const playerStats: PlayerStatsData = {
   topScorers: [
-    { position: 1, player: "Richard Araujo", club: "Capitán Cristaldo", value: 6 },
+    {
+      position: 1,
+      player: "Richard Araujo",
+      // Transferred — note displayed in UI
+      club: "Capitán Cristaldo",
+      value: 6,
+      note: "Transferido a Deportivo Santaní (Intermedia)",
+    },
     { position: 2, player: "Brian Enciso", club: "12 de Agosto", value: 4 },
-    { position: 3, player: "Richard Benítez", club: "Mcal. Estigarribia", value: 4 },
+    { position: 3, player: "Richard Benítez", club: "Mcal Estigarribia", value: 4 },
     { position: 4, player: "José Barrios", club: "Libertad Ojopoi", value: 4 },
     { position: 5, player: "Richard Báez", club: "Sport Unión", value: 3 },
     { position: 6, player: "José Benítez", club: "Sport San Blas", value: 3 },
+    { position: 7, player: "Sandro Galeano", club: "Juventud", value: 3 },
   ],
   bestPlayers: [
     { position: 1, player: "Por confirmar", club: "—", value: "MVP" },

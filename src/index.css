@@ -131,6 +131,22 @@
 
   .section-padding {
     @apply px-4 py-16 md:px-8 md:py-24 lg:px-16;
+    /* Avoid abrupt background cuts — sections inherit background smoothly */
+    position: relative;
+    background: transparent;
+  }
+
+  /* Alternate section tones for visual rhythm */
+  .section-alt {
+    background: hsl(0 0% 6%);
+  }
+
+  /* Smooth separator between sections */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(0 0% 18%), transparent);
+    margin: 0 auto;
+    max-width: 60%;
   }
 
   .table-row-alt:nth-child(even) {

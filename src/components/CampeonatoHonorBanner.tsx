@@ -126,15 +126,7 @@ const CampeonatoHonorBanner = () => {
             <div className="flex items-center justify-between gap-3">
               {/* Home */}
               <div className="flex flex-col items-center gap-2 flex-1 min-w-0">
-                <div
-                  className="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center border-2 flex-shrink-0"
-                  style={{
-                    background: "hsl(350 60% 18% / 0.5)",
-                    borderColor: "hsl(350 60% 45% / 0.35)",
-                  }}
-                >
-                  <ClubLogo clubName="Sport San Blas" size="lg" />
-                </div>
+                <ClubLogo clubName="Sport San Blas" size="xl" />
                 <span
                   className="font-heading text-xs sm:text-sm font-bold uppercase text-center leading-tight"
                   style={{ color: "hsl(40 20% 92%)" }}
@@ -166,15 +158,7 @@ const CampeonatoHonorBanner = () => {
 
               {/* Away */}
               <div className="flex flex-col items-center gap-2 flex-1 min-w-0">
-                <div
-                  className="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center border-2 flex-shrink-0"
-                  style={{
-                    background: "hsl(43 60% 14% / 0.5)",
-                    borderColor: "hsl(43 70% 40% / 0.35)",
-                  }}
-                >
-                  <ClubLogo clubName="15 de Agosto" size="lg" />
-                </div>
+                <ClubLogo clubName="15 de Agosto" size="xl" />
                 <span
                   className="font-heading text-xs sm:text-sm font-bold uppercase text-center leading-tight"
                   style={{ color: "hsl(40 20% 92%)" }}

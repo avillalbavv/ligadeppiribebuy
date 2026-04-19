@@ -56,7 +56,7 @@ const ClubLogo = ({ clubName, size = "md", className = "" }: Props) => {
 
   return (
     <div
-      className={`${sizeClass} rounded-full bg-primary/30 border border-secondary/40 flex items-center justify-center flex-shrink-0 ${className}`}
+      className={`${sizeClass} rounded-lg bg-primary/20 border border-secondary/30 flex items-center justify-center flex-shrink-0 ${className}`}
       title={clubName}
       aria-label={`Escudo de ${clubName}`}
     >

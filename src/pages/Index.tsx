@@ -3,7 +3,6 @@ import HeroSection from "@/components/HeroSection";
 import CampeonatoHonorBanner from "@/components/CampeonatoHonorBanner";
 import UpcomingMatches from "@/components/UpcomingMatches";
 import ResultsSection from "@/components/ResultsSection";
-import EventSection from "@/components/EventSection";
 import AboutSection from "@/components/AboutSection";
 import StandingsSection from "@/components/StandingsSection";
 import FixtureSection from "@/components/FixtureSection";
@@ -14,26 +13,65 @@ import ClubsSection from "@/components/ClubsSection";
 import NewsSection from "@/components/NewsSection";
 import FooterSection from "@/components/FooterSection";
 
+/** Thin decorative divider between sections */
+const Divider = () => (
+  <div className="section-divider" />
+);
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
+
+      {/* Hero */}
       <HeroSection />
+
       {/* 1. Campeonato de Honor 2026 — Banner principal */}
       <CampeonatoHonorBanner />
+      <Divider />
+
       {/* 2. Próximos eventos — Fecha 7 */}
-      <UpcomingMatches />
+      <div style={{ background: "hsl(0 0% 7%)" }}>
+        <UpcomingMatches />
+      </div>
+      <Divider />
+
       {/* 3. Resultados — Fecha 6 */}
       <ResultsSection />
-      <EventSection />
-      <AboutSection />
+      <Divider />
+
+      {/* 4. Resto del sitio */}
+      <div style={{ background: "hsl(0 0% 7%)" }}>
+        <AboutSection />
+      </div>
+      <Divider />
+
       <StandingsSection />
-      <FixtureSection />
+      <Divider />
+
+      <div style={{ background: "hsl(0 0% 7%)" }}>
+        <FixtureSection />
+      </div>
+      <Divider />
+
       <ResolucionesSection />
-      <PlayerStatsSection />
+      <Divider />
+
+      <div style={{ background: "hsl(0 0% 7%)" }}>
+        <PlayerStatsSection />
+      </div>
+      <Divider />
+
       <SeriesSection />
-      <ClubsSection />
+      <Divider />
+
+      <div style={{ background: "hsl(0 0% 7%)" }}>
+        <ClubsSection />
+      </div>
+      <Divider />
+
       <NewsSection />
+
       <FooterSection />
     </div>
   );
