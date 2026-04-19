@@ -4,30 +4,24 @@ import ClubLogo from "./ClubLogo";
 const CampeonatoHonorBanner = () => {
   return (
     <section id="evento-destacado" className="relative overflow-hidden">
-      {/* Background */}
+      {/* Background — blends with site background, subtle accent only */}
       <div className="absolute inset-0 pointer-events-none">
+        {/* Very subtle diagonal stripes — same tone as site bg */}
         <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(135deg, hsl(350 65% 18%) 0%, hsl(0 0% 5%) 45%, hsl(43 60% 12%) 100%)",
-          }}
-        />
-        {/* Diagonal accent stripes */}
-        <div
-          className="absolute inset-0 opacity-[0.04]"
+          className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(45deg, hsl(43 80% 50%) 0px, hsl(43 80% 50%) 2px, transparent 2px, transparent 38px)",
+              "repeating-linear-gradient(45deg, hsl(43 80% 50%) 0px, hsl(43 80% 50%) 1px, transparent 1px, transparent 40px)",
           }}
         />
-        {/* Glow orbs */}
+        {/* Soft gold glow top-right */}
         <div
-          className="absolute -top-24 -right-24 w-72 h-72 rounded-full opacity-15 blur-3xl"
-          style={{ background: "hsl(43 80% 50%)" }}
+          className="absolute top-0 right-0 w-96 h-64 opacity-[0.06] blur-3xl"
+          style={{ background: "hsl(43 80% 55%)" }}
         />
+        {/* Soft garnet glow bottom-left */}
         <div
-          className="absolute -bottom-24 -left-24 w-72 h-72 rounded-full opacity-15 blur-3xl"
+          className="absolute bottom-0 left-0 w-96 h-64 opacity-[0.06] blur-3xl"
           style={{ background: "hsl(350 60% 35%)" }}
         />
       </div>
@@ -221,8 +215,7 @@ const CampeonatoHonorBanner = () => {
         </div>
       </div>
 
-      {/* Bottom fade to bg */}
-      <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+
     </section>
   );
 };
