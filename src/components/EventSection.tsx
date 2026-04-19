@@ -10,7 +10,7 @@ const EventSection = () => {
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 mb-3">
             <Zap className="w-5 h-5 text-secondary" />
-            <span className="text-xs uppercase tracking-widest text-secondary font-semibold">Resultados Finales</span>
+            <span className="text-xs uppercase tracking-widest text-secondary font-semibold">Resultados Finales — Fecha 6</span>
           </div>
           <h2 className="font-heading text-3xl md:text-5xl font-bold uppercase tracking-tight text-foreground">
             Partidos Destacados — 6ª Fecha

@@ -4,14 +4,13 @@ import ldpLogo from "@/assets/ldp-logo.png";
 
 const navLinks = [
   { label: "Inicio", href: "#inicio" },
+  { label: "Evento Destacado", href: "#evento-destacado" },
+  { label: "Próximos Partidos", href: "#proximos-partidos" },
   { label: "Resultados", href: "#resultados" },
   { label: "Posiciones", href: "#posiciones" },
-  { label: "Clasificados", href: "#clasificados" },
   { label: "Fixture", href: "#fixture" },
   { label: "Resoluciones", href: "#resoluciones" },
-  { label: "Estadísticas", href: "#estadisticas" },
   { label: "Clubes", href: "#clubes" },
-  { label: "Contacto", href: "#contacto" },
 ];
 
 const Navbar = () => {

@@ -83,7 +83,7 @@ const ResultsSection = () => {
             </span>
           </div>
           <h2 className="font-heading text-3xl md:text-5xl font-bold uppercase tracking-tight text-foreground">
-            Sexta Fecha
+            Resultados — Fecha 6
           </h2>
           <p className="text-muted-foreground text-sm mt-2">
             Campeonato Liga Deportiva de Piribebuy 2026 — Martes 14 de Abril
