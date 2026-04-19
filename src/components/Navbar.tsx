@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/30">
-      <div className="container mx-auto flex items-center justify-between h-16 md:h-20">
+      <div className="container mx-auto flex items-center justify-between h-16 md:h-20 px-4">
         <a href="#inicio" className="flex items-center gap-2">
           <img src={ldpLogo} alt="L.D.P." className="w-10 h-10 object-contain" />
           <div>

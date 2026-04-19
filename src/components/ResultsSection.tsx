@@ -43,7 +43,7 @@ const MatchGrid = ({ results }: { results: MatchResult[] }) => (
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2 flex-1 min-w-0">
               <ClubLogo clubName={match.home} size="sm" />
-              <span className={`text-xs sm:text-sm ${homeWin ? "font-bold text-secondary" : "font-medium text-foreground"}`}>
+              <span className={`text-xs sm:text-sm truncate ${homeWin ? "font-bold text-secondary" : "font-medium text-foreground"}`}>
                 {match.home}
               </span>
             </div>
@@ -57,7 +57,7 @@ const MatchGrid = ({ results }: { results: MatchResult[] }) => (
               </span>
             </div>
             <div className="flex items-center gap-2 flex-1 min-w-0 justify-end">
-              <span className={`text-xs sm:text-sm text-right ${awayWin ? "font-bold text-secondary" : "font-medium text-foreground"}`}>
+              <span className={`text-xs sm:text-sm text-right truncate ${awayWin ? "font-bold text-secondary" : "font-medium text-foreground"}`}>
                 {match.away}
               </span>
               <ClubLogo clubName={match.away} size="sm" />

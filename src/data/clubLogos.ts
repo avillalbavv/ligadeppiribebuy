@@ -19,30 +19,85 @@ import tresDeFebrero from "@/assets/clubs/3_de_febrero.png";
 import primeroDeMarzo from "@/assets/clubs/1_de_marzo.png";
 
 export const clubLogos: Record<string, string> = {
+  // ── Sport Unión ──────────────────────────────────────────────
   "Sport Unión": sportunion,
+  "Sport Union": sportunion,
+
+  // ── Sport San Blas ───────────────────────────────────────────
   "Sport San Blas": sanblas,
+
+  // ── Sol de Mayo ──────────────────────────────────────────────
   "Sol de Mayo": soldemayo,
+
+  // ── Itaguyrá ─────────────────────────────────────────────────
   "Sportivo Itaguyrá": itaguyra,
+  "Itaguyra": itaguyra,
+  "Itaguyrá": itaguyra,
+
+  // ── Libertad Ojopoi ──────────────────────────────────────────
   "Libertad Ojopoi": libertadOjopoi,
+
+  // ── Mariscal Estigarribia ────────────────────────────────────
   "Mcal. Estigarribia": mcalestigarribia,
+  "Mcal Estigarribia": mcalestigarribia,
+  "Mariscal Estigarribia": mcalestigarribia,
+
+  // ── Humaitá ──────────────────────────────────────────────────
   "Humaitá": humaita,
+  "Humaita": humaita,
+
+  // ── Juventud ─────────────────────────────────────────────────
   "Juventud": juventud,
   "Juventud Cordillerana": juventud,
   "Juventud Cord.": juventud,
+
+  // ── Guaraní ──────────────────────────────────────────────────
   "Guaraní": guarani,
   "Guaraní de Paso Hũ": guarani,
+  "Guarani": guarani,
+
+  // ── Libertad Yruguá ──────────────────────────────────────────
   "Libertad Yrugua": libertadYhaka,
+  "Libertad Y": libertadYhaka,
+  "Libertad Yruguá": libertadYhaka,
+
+  // ── General Caballero ────────────────────────────────────────
   "Gral. Caballero": generalCaballero,
+  "Gral Caballero": generalCaballero,
+  "General Caballero": generalCaballero,
+
+  // ── Capitán Cristaldo ────────────────────────────────────────
   "Capitán Cristaldo": capitanCristaldo,
+  "Capitan Cristaldo": capitanCristaldo,
+
+  // ── Independiente ────────────────────────────────────────────
   "Independiente": atleticoIndependiente,
   "Atlético Independiente": atleticoIndependiente,
+  "Atletico Independiente": atleticoIndependiente,
+
+  // ── 15 de Agosto ─────────────────────────────────────────────
   "15 de Agosto": quinceDeAgosto,
+
+  // ── 13 de Junio SA ───────────────────────────────────────────
   "13 de Junio S.A.": treceDeJunioSA,
+  "13 de Junio SA": treceDeJunioSA,
+  "13 de Junio (S.A.)": treceDeJunioSA,
+
+  // ── 13 de Junio CC ───────────────────────────────────────────
   "13 de Junio C.C.": treceDeJunioCC,
   "13 de Junio (C.C.)": treceDeJunioCC,
+  "13 de Junio": treceDeJunioCC,
+
+  // ── 12 de Agosto ─────────────────────────────────────────────
   "12 de Agosto": doceDeAgosto,
+
+  // ── 3 de Febrero ─────────────────────────────────────────────
   "3 de Febrero": tresDeFebrero,
+
+  // ── 1° de Marzo ──────────────────────────────────────────────
   "1° de Marzo": primeroDeMarzo,
+  "1 de Marzo": primeroDeMarzo,
+  "1º de Marzo": primeroDeMarzo,
 };
 
 export const getClubLogo = (clubName: string): string | undefined => {
